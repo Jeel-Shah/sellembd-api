@@ -68,12 +68,25 @@ var style_link = document.createElement("link");
 
 style_link.type = "text/css";
 style_link.rel = "stylesheet";
-style_link.href = "https://127.0.0.1:5000/api/render-style.css";
+style_link.href = "http://127.0.0.1:5000/api/render-style.css";
 
 head.appendChild(style_link);
 
 // DOM Insertion
 var main_div = document.getElementById("sell0783");
+
+var sub_div_one = document.createElement("div");
+sub_div_one.setAttribute("id", "sell0783-inner-div-one");
+
+var sub_div_two = document.createElement("div");
+sub_div_two.setAttribute("id", "sell0783-inner-div-two");
+
+var sub_div_three = document.createElement("div");
+sub_div_three.setAttribute("id", "sell0783-inner-div-three");
+
+main_div.appendChild(sub_div_one);
+main_div.appendChild(sub_div_two);
+main_div.appendChild(sub_div_three);
 
 var para = document.createElement("p");
 
