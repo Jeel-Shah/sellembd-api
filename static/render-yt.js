@@ -36,7 +36,6 @@ function makeCorsRequest(method, url){
 function sendCorsRequest(){
     var url = "http://127.0.0.1:5000/api/";
 
-    alert('inside cors');
     var xhr = makeCorsRequest('GET', url);
 
     if (!xhr) {
@@ -62,3 +61,24 @@ function sendCorsRequest(){
 }
 
 sendCorsRequest();
+
+// Let's grab the stylesheet
+var head = document.head;
+var style_link = document.createElement("link");
+
+style_link.type = "text/css";
+style_link.rel = "stylesheet";
+style_link.href = "https://127.0.0.1:5000/api/render-style.css";
+
+head.appendChild(style_link);
+
+// DOM Insertion
+var main_div = document.getElementById("sell0783");
+
+var para = document.createElement("p");
+
+var node = document.createTextNode("This is a new paragraph");
+
+para.appendChild(node);
+
+main_div.appendChild(para);
