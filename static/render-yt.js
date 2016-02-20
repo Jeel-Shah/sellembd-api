@@ -8,6 +8,7 @@
     Songs listened to while coding (irrelevant but fun to document):
 
     1. Kanye West - Ultra Light Beam
+    2.
 
 */
 
@@ -76,22 +77,14 @@ head.appendChild(style_link);
 var main_div = document.getElementById("sell0783");
 
 var sub_div_one = document.createElement("div");
-sub_div_one.setAttribute("id", "sell0783-inner-div-one");
+sub_div_one.setAttribute("id", "sell0783-inner-div");
 
 var sub_div_two = document.createElement("div");
-sub_div_two.setAttribute("id", "sell0783-inner-div-two");
+sub_div_two.setAttribute("id", "sell0783-inner-div");
 
 var sub_div_three = document.createElement("div");
-sub_div_three.setAttribute("id", "sell0783-inner-div-three");
+sub_div_three.setAttribute("id", "sell0783-inner-div");
 
 main_div.appendChild(sub_div_one);
 main_div.appendChild(sub_div_two);
 main_div.appendChild(sub_div_three);
-
-var para = document.createElement("p");
-
-var node = document.createTextNode("This is a new paragraph");
-
-para.appendChild(node);
-
-main_div.appendChild(para);

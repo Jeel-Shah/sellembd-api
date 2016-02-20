@@ -97,6 +97,7 @@ def get_ytvideos():
 @app.route('/api/<path:filename>')
 @cross_origin()
 def get_static(filename):
+    print(request.args)
     root_dir = os.path.abspath(os.path.dirname(__file__))
     return send_from_directory(os.path.join(root_dir, 'static'), filename)
 
