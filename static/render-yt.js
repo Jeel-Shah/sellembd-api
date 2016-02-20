@@ -109,6 +109,10 @@ var main_inner_div_desc_text = document.createTextNode(desc);
 
 main_inner_div.setAttribute("id","sell0783-main");
 
+main_inner_div_title.setAttribute("id", "sell0783-title");
+main_inner_div_center.setAttribute("id", "sell0783-center");
+main_inner_div_desc.setAttribute("id", "sell0783-desc");
+
 main_inner_div_title_p.appendChild(main_inner_div_title_text);
 main_inner_div_title.appendChild(main_inner_div_title_p);
 
