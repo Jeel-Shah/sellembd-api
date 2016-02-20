@@ -73,18 +73,50 @@ style_link.href = "http://127.0.0.1:5000/api/render-style.css";
 
 head.appendChild(style_link);
 
-// DOM Insertion
+// This id will be changed dynamically depending on the random number passed through
 var main_div = document.getElementById("sell0783");
 
-var sub_div_one = document.createElement("div");
-sub_div_one.setAttribute("id", "sell0783-inner-div");
+// TODO Connect JSON
+var desc = "Temporary desc";
+var title = "Temporary title";
 
-var sub_div_two = document.createElement("div");
-sub_div_two.setAttribute("id", "sell0783-inner-div");
+/*
+  main_inner_div
+  +----------+
+  |          |
+  | +------+ |
+  | |  (1) | | (1) inner div
+  | |      | |
+  | |      | |
+  | +------+ |
+  |          |
+  +----------+
 
-var sub_div_three = document.createElement("div");
-sub_div_three.setAttribute("id", "sell0783-inner-div");
 
-main_div.appendChild(sub_div_one);
-main_div.appendChild(sub_div_two);
-main_div.appendChild(sub_div_three);
+*/
+
+var main_inner_div = document.createElement("div");
+
+var main_inner_div_title = document.createElement("div");
+var main_inner_div_title_p = document.createElement("p");
+var main_inner_div_title_text = document.createTextNode(title);
+
+var main_inner_div_center = document.createElement("div");
+
+var main_inner_div_desc = document.createElement("div");
+var main_inner_div_desc_p = document.createElement("p");
+var main_inner_div_desc_text = document.createTextNode(desc);
+
+main_inner_div.setAttribute("id","sell0783-main");
+
+main_inner_div_title_p.appendChild(main_inner_div_title_text);
+main_inner_div_title.appendChild(main_inner_div_title_p);
+
+main_inner_div_desc_p.appendChild(main_inner_div_desc_text);
+main_inner_div_desc.appendChild(main_inner_div_desc_p);
+
+main_inner_div.appendChild(main_inner_div_title);
+main_inner_div.appendChild(main_inner_div_center);
+main_inner_div.appendChild(main_inner_div_desc);
+
+main_div.appendChild(main_inner_div);
