@@ -61,17 +61,17 @@ function sendCorsRequest(){
 
 }
 
-sendCorsRequest();
+// sendCorsRequest();
 
 // Let's grab the stylesheet
-var head = document.head;
+/*var head = document.head;
 var style_link = document.createElement("link");
 
 style_link.type = "text/css";
 style_link.rel = "stylesheet";
 style_link.href = "http://127.0.0.1:5000/api/render-style.css";
 
-head.appendChild(style_link);
+head.appendChild(style_link); */
 
 // This id will be changed dynamically depending on the random number passed through
 

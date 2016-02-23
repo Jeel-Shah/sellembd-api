@@ -5,6 +5,8 @@
 
 # Solution found using SO
 # http://stackoverflow.com/questions/6116978/python-replace-multiple-strings
+import os.path
+
 g_pageId = ""
 
 
@@ -14,6 +16,12 @@ def replace_all(text, dic):
 
     return text
 
+def file_check(pageId):
+    """
+    If the file exists then we need not create another one.
+    """
+    return os.path.isfile("reference/" + pageId + ".js")
+
 
 def generate_file(pageId, youtubeId, title, desc, random_number):
     """
@@ -21,15 +29,22 @@ def generate_file(pageId, youtubeId, title, desc, random_number):
     and will return the path of the saved file so get_params
     can reference it later
     """
+    global g_pageId
+    g_pageId = pageId
+
+#   If the file exists then we don't need to create another one.
+#   Instead we can just return the existing file path and be done
+
+    if(file_check(pageId)):
+        return pageId + ".js"
+
     file_reader = open('static/base.js', 'r')
 
     content = file_reader.read()
     file_reader.close()
 
-    global g_pageId
-    g_pageId = pageId
 
-    replacements = {"[main_div_id]": random_number, "[desc]": desc,
+    replacements = {"[main_div_id]": "sd-"+pageId, "[desc]": desc,
                     "[youtubeId]": youtubeId, "[pageId]": pageId,
                     "[title]": title}
 
@@ -37,7 +52,7 @@ def generate_file(pageId, youtubeId, title, desc, random_number):
 
     new_file_name = pageId + ".js"
 
-    output_file = open(new_file_name, 'w')
+    output_file = open("reference/" + new_file_name, 'w')
     output_file.write(new_file_content)
 
     return new_file_name
@@ -45,6 +60,6 @@ def generate_file(pageId, youtubeId, title, desc, random_number):
 
 def generate_embed(path):
     js_script = "<script src=159.203.108.89:8000/api/" + path + "></script>"
-    html_script = "\n<div id='"+g_pageId+"'></div>"
+    html_script = "\n<div id='sd-"+g_pageId+"'></div>"
 
     return js_script + html_script
