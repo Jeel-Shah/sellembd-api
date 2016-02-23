@@ -1,6 +1,8 @@
 from flask import Flask, send_from_directory, request
 from flask.ext.cors import CORS, cross_origin
 
+from renderjs import generate_file
+
 import os
 
 app = Flask(__name__)
@@ -18,7 +20,7 @@ def get_static(filename):
 @app.route('/api/params')
 @cross_origin()
 def get_params():
-    print(request.args)
+
     return "get_params"
 
 if __name__ == '__main__':

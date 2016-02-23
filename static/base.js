@@ -80,6 +80,7 @@ var main_div_id = "[main_div_id]";
 var desc = "[desc]";
 var title = "[title]";
 var youtubeID = "[youtubeId]";
+var pageId = "[pageId]";
 
 var main_div = document.getElementById(main_div_id);
 

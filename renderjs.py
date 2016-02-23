@@ -5,6 +5,9 @@
 
 # Solution found using SO
 # http://stackoverflow.com/questions/6116978/python-replace-multiple-strings
+g_pageId = ""
+
+
 def replace_all(text, dic):
     for i, j in dic.iteritems():
         text = text.replace(i, j)
@@ -23,6 +26,9 @@ def generate_file(pageId, youtubeId, title, desc, random_number):
     content = file_reader.read()
     file_reader.close()
 
+    global g_pageId
+    g_pageId = pageId
+
     replacements = {"[main_div_id]": random_number, "[desc]": desc,
                     "[youtubeId]": youtubeId, "[pageId]": pageId,
                     "[title]": title}
@@ -36,4 +42,9 @@ def generate_file(pageId, youtubeId, title, desc, random_number):
 
     return new_file_name
 
-generate_file("12345678", "KCRIBIusg48", "Painting Roses", "Great!", "64528")
+
+def generate_embed(path):
+    js_script = "<script src=159.203.108.89:8000/api/" + path
+    html_script = "\n<div id='"+g_pageId+"'></div>"
+
+    return js_script + html_script
