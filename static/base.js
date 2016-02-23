@@ -75,10 +75,11 @@ head.appendChild(style_link);
 
 // This id will be changed dynamically depending on the random number passed through
 
-var main_div_id = "[main_div_id]"
+var main_div_id = "[main_div_id]";
 
 var desc = "[desc]";
 var title = "[title]";
+var youtubeID = "[youtubeId]";
 
 var main_div = document.getElementById(main_div_id);
 
