@@ -35,7 +35,7 @@ def generate_file(pageId, youtubeId, title, desc, random_number):
 
     new_file_content = replace_all(content, replacements)
 
-    new_file_name = "reference/" + pageId + ".js"
+    new_file_name = pageId + ".js"
 
     output_file = open(new_file_name, 'w')
     output_file.write(new_file_content)
@@ -44,7 +44,7 @@ def generate_file(pageId, youtubeId, title, desc, random_number):
 
 
 def generate_embed(path):
-    js_script = "<script src=159.203.108.89:8000/api/" + path
+    js_script = "<script src=159.203.108.89:8000/api/" + path + "></script>"
     html_script = "\n<div id='"+g_pageId+"'></div>"
 
     return js_script + html_script
