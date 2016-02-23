@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, send_from_directory, request
+from flask import Flask, send_from_directory, request
 from flask.ext.cors import CORS, cross_origin
 
 import os
@@ -19,7 +19,7 @@ def get_static(filename):
 @cross_origin()
 def get_params():
     print(request.args)
-    return "yo what's up?"
+    return "get_params"
 
 if __name__ == '__main__':
     app.run(debug=True)
