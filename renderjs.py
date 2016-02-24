@@ -37,7 +37,7 @@ def generate_css(pageId):
     new_file_name = pageId + ".css"
 
     output_file = open("reference/" + new_file_name, 'w')
-    output_file.write(content)
+    output_file.write(new_file_content)
 
 
 def generate_file(pageId, youtubeId, title, desc, random_number, imageId):
@@ -73,6 +73,7 @@ def generate_file(pageId, youtubeId, title, desc, random_number, imageId):
     generate_css(pageId)
 
     return new_file_name
+
 
 def generate_embed(path):
 
