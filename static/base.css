@@ -1,0 +1,31 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+html, body {
+    height: 100%;
+}
+
+#sd-56ab97d0bf5da5426894e110 {
+    position: relative;
+    height: 600px;
+    width: 600px;
+}
+
+#main-inner-image {
+    position: relative;
+    width: 100%;
+}
+
+#main-inner-header {
+    font-family: 'Open Sans', sans-serif;
+}
+
+#main-inner-footer {
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    display: inline-block;
+    width: 100%;
+}
+
+#desc-p {
+    border: 1px solid black;
+}
