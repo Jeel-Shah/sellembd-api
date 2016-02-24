@@ -23,13 +23,14 @@ def file_check(pageId):
     """
     return os.path.isfile("reference/" + pageId + ".js")
 
+
 def generate_css(pageId):
     file_reader = open('static/base.css', 'r')
 
     content = file_reader.read()
     file_reader.close()
 
-    replacements = {"[main_div_id]": "sd-"+pageId}
+    replacements = {"#[main_div_id]": "#sd-"+pageId}
 
     new_file_content = replace_all(content, replacements)
 
@@ -60,7 +61,7 @@ def generate_file(pageId, youtubeId, title, desc, random_number, imageId):
 
     replacements = {"[main_div_id]": "sd-"+pageId, "[desc]": desc,
                     "[youtubeId]": youtubeId, "[pageId]": pageId,
-                    "[title]": title, "[imageId": imageId}
+                    "[title]": title, "[imageId]": imageId}
 
     new_file_content = replace_all(content, replacements)
 
