@@ -3,15 +3,6 @@
 */
 
 
-/*
-    ouuuu some beautiful javascript
-    Songs listened to while coding (irrelevant but fun to document):
-
-    1. Kanye West - Ultra Light Beam
-    2.
-
-*/
-
 // Variable declarations
 var json_object = '';
 

@@ -3,15 +3,6 @@
 */
 
 
-/*
-    ouuuu some beautiful javascript
-    Songs listened to while coding (irrelevant but fun to document):
-
-    1. Kanye West - Ultra Light Beam
-    2.
-
-*/
-
 // Variable declarations
 var json_object = '';
 
@@ -54,24 +45,15 @@ function sendCorsRequest(){
 
 
     xhr.onerror = function(){
-        console.log('Whoops, something went wrong whiel making the request');
+        console.log('Whoops, something went wrong while making the request');
     };
 
     xhr.send();
 
 }
 
-// sendCorsRequest();
+sendCorsRequest();
 
-// Let's grab the stylesheet
-/*var head = document.head;
-var style_link = document.createElement("link");
-
-style_link.type = "text/css";
-style_link.rel = "stylesheet";
-style_link.href = "http://127.0.0.1:5000/api/render-style.css";
-
-head.appendChild(style_link); */
 
 // This id will be changed dynamically depending on the random number passed through
 
@@ -84,7 +66,15 @@ var pageId = "[pageId]";
 
 var main_div = document.getElementById(main_div_id);
 
-// TODO Connect JSON
+// Let's grab the stylesheet
+var head = document.head;
+var style_link = document.createElement("link");
+
+style_link.type = "text/css";
+style_link.rel = "stylesheet";
+style_link.href = "http://127.0.0.1:5000/api/" + main_div_id + ".css";
+
+head.appendChild(style_link); 
 
 /*
   main_inner_div
