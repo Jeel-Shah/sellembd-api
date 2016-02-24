@@ -1,0 +1,64 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+#[main_div_id]{
+    position: relative;
+    height: 600px;
+    width: 500px;
+    
+    box-shadow: 0px 0px 2px #888888;
+    -webkit-box-shadow: 0px 0px 2px #888888;
+    -moz-box-shadow: 0px 0px 2px #888888;
+}
+
+#[main_div_id]:hover {
+    box-shadow: 0px 0px 15px #888888;
+    -webkit-box-shadow: 0px 0px 15px #888888;
+    -moz-box-shadow: 0px 0px 15px #888888;
+}
+
+#main-inner-image {
+    position: relative;
+    width: 100%;
+}
+
+#main-inner-header {
+    font-family: 'Open Sans', sans-serif;
+}
+
+#main-inner-footer {
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    margin-top: 15px;
+}
+
+#main-inner-footer-bottom {
+    position: absolute;
+    margin-left: 10px;
+    bottom: 0;
+    right: 15px;
+}
+
+#desc-p {
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+#header-title {
+    padding-top: 20px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#sel-inner-ul li {
+    display: inline-block;
+    font-size: 20px;
+}
+
+#sel-inner-ul li:first-child {
+    margin-right: 15px;
+}
