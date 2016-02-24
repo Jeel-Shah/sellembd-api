@@ -40,7 +40,7 @@ def generate_css(pageId):
     output_file.write(new_file_content)
 
 
-def generate_file(pageId, youtubeId, title, desc, random_number, imageId):
+def generate_file(pageId, youtubeId, title, desc, imageId):
     """
     This will generate a js file with relevant information replaced
     and will return the path of the saved file so get_params
@@ -78,9 +78,29 @@ def generate_file(pageId, youtubeId, title, desc, random_number, imageId):
 def generate_embed(path):
 
     js_src = "src='http://159.203.108.89:8000/api/"
-    js_origin = " crossorigin=anonymous"
+    js_origin = " crossorigin='anonymous'"
 
-    js_script = "\n<script "+js_src+path+"'"+js_origin+"></script>"
+    js_script = "<script "+js_src+path+"'"+js_origin+"></script>"
     html_script = "<div id='sd-"+g_pageId+"'></div>"
 
-    return html_script + js_script
+    js_embed_code = replace_all(html_script + js_script, {"'": "\\'"})
+
+    embed_code = html_script + "\n"+js_script
+
+#   Insert embed code into the javascript
+    file_reader = open('reference/'+path, 'r')
+
+    content = file_reader.read()
+    file_reader.close()
+
+    replacement = {"[embed_code]": js_embed_code}
+
+    new_file_content = replace_all(content, replacement)
+
+#   Re write the file with the updated code
+    file_writer = open('reference/'+path, 'w')
+    file_writer.write(new_file_content)
+
+    file_writer.close()
+
+    return embed_code

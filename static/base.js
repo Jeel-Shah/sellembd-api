@@ -173,3 +173,8 @@ main_inner_div.appendChild(main_inner_div_footer);
 main_inner_div.appendChild(main_inner_footer_bottom);
 
 main_div.appendChild(main_inner_div);
+
+function generateEmbed(){
+    prompt("Your embed code", "[embed_code]");
+}
+

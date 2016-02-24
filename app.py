@@ -30,10 +30,9 @@ def get_params():
     youtubeId = content['youtubeId']
     title = content['title']
     desc = content['desc']
-    random_number = content['random_number']
     imageId = content['imageId']
 
-    file_path = generate_file(pageId, youtubeId, title, desc, random_number, imageId)
+    file_path = generate_file(pageId, youtubeId, title, desc,imageId)
 
     embed_code = generate_embed(file_path)
 
