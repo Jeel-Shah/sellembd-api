@@ -23,6 +23,21 @@ def file_check(pageId):
     """
     return os.path.isfile("reference/" + pageId + ".js")
 
+def generate_css(pageId):
+    file_reader = open('static/base.css', 'r')
+
+    content = file_reader.read()
+    file_reader.close()
+
+    replacements = {"[main_div_id]": pageId}
+
+    new_file_content = replace_all(content, replacements)
+
+    new_file_name = pageId + ".css"
+
+    output_file = open("reference/" + new_file_name, 'w')
+    output_file.write(content)
+
 
 def generate_file(pageId, youtubeId, title, desc, random_number, imageId):
     """
@@ -54,11 +69,12 @@ def generate_file(pageId, youtubeId, title, desc, random_number, imageId):
     output_file = open("reference/" + new_file_name, 'w')
     output_file.write(new_file_content)
 
+    generate_css(pageId)
+
     return new_file_name
 
-
 def generate_embed(path):
-    js_script = "'<script src=159.203.108.89:8000/api/" + path + "></script>'"
+    js_script = "'<script crossorigin='anonymous' src=http://159.203.108.89:8000/api/" + path + "></script>'"
     html_script = "\n<div id='sd-"+g_pageId+"'></div>"
 
-    return js_script + html_script
+    return html_script + js_script
