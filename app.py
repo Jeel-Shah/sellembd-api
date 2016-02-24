@@ -1,4 +1,4 @@
-from flask import Flask, send_from_directory, request
+from flask import Flask, send_from_directory, request, render_template
 from flask.ext.cors import CORS, cross_origin
 
 from renderjs import generate_file, generate_embed
@@ -8,6 +8,11 @@ import os
 app = Flask(__name__)
 
 CORS(app)
+
+
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 
 @app.route('/api/<path:filename>')
