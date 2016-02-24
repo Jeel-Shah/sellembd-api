@@ -2,7 +2,7 @@
 <html>
     <head>
         <title> Sellento Embed </title>
-        <link rel="stylesheet" href="{{url_for('static', filename='base.css')}}" />
+        <link rel="stylesheet" href="{{url_for('static', filename='index-style.css')}}" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         
         <!-- Latest compiled and minified CSS -->
@@ -23,13 +23,13 @@
                     </div>
 
                     <div id="main-inner-footer">
-                        <p id="desc-p"> Great description goes here! </p>
+                        <p id="desc-p"> Début du streaming à 01:06:26 / The streaming starts at 01:06:26 </p>
                     </div>
 
                     <div id="main-inner-footer-bottom">
                         <ul id="sel-inner-ul">
                             <li> <i class="fa fa-heart"></i> </li>
-                            <li> <i class="fa fa-share-alt"></i> </li>
+                            <li onclick="generateEmbed()"> <i class="fa fa-share-alt"></i> </li>
                         </ul>
                     </div>
                 </div>

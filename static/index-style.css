@@ -2,8 +2,15 @@
 
 html, body {
     height: 100%;
+    background: #F7F7F7;
 }
 
+/*
+ * The code below will be generated dynamically server side and then will be placed inside the javascript file
+ * served to the user. 
+ *
+ * We will also have to call on fontawesome until we can package icons with the js or dyanmically generate them
+ * */
 #sd-56ab97d0bf5da5426894e110 {
     position: relative;
     height: 600px;
@@ -34,12 +41,10 @@ html, body {
     font-family: 'Open Sans', sans-serif;
     width: 100%;
     margin-top: 15px;
-    border: 1px solid blue;
 }
 
 #main-inner-footer-bottom {
     position: absolute;
-/*    border: 1px solid red; */
     margin-left: 10px;
     bottom: 0;
     right: 15px;
@@ -55,8 +60,6 @@ html, body {
     padding-bottom: 15px;
     padding-left: 20px;
     padding-right: 20px;
-
-    border: 1px solid black;
 
     font-weight: bold;
     font-size: 20px;
