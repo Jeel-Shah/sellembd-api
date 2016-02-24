@@ -73,7 +73,7 @@ var style_link = document.createElement("link");
 
 style_link.type = "text/css";
 style_link.rel = "stylesheet";
-style_link.href = "http://159.201.108.89:8000/api/" + pageId + ".css";
+style_link.href = "http://159.203.108.89:8000/api/" + pageId + ".css";
 
 // Let's add fontawesome for the time being
 var font_link = document.createElement("link");

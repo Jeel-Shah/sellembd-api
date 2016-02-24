@@ -77,9 +77,9 @@ def generate_file(pageId, youtubeId, title, desc, random_number, imageId):
 def generate_embed(path):
 
     js_src = "src=http://159.203.108.89:8000/api/"
-    js_origin = " crossorigin=anonymous>"
+    js_origin = " crossorigin=anonymous"
 
-    js_script = "'<script "+js_src+path+js_origin+"></script>'"
+    js_script = "<script "+js_src+path+js_origin+"></script>"
     html_script = "\n<div id='sd-"+g_pageId+"'></div>"
 
     return html_script + js_script
