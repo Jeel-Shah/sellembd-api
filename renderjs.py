@@ -3,13 +3,13 @@
 # for reference later
 
 
-# Solution found using SO
-# http://stackoverflow.com/questions/6116978/python-replace-multiple-strings
 import os.path
 
 g_pageId = ""
 
 
+# Solution found using SO
+# http://stackoverflow.com/questions/6116978/python-replace-multiple-strings
 def replace_all(text, dic):
     for i, j in dic.iteritems():
         text = text.replace(i, j)
@@ -34,7 +34,6 @@ def generate_file(pageId, youtubeId, title, desc, random_number):
 
 #   If the file exists then we don't need to create another one.
 #   Instead we can just return the existing file path and be done
-
     if(file_check(pageId)):
         return pageId + ".js"
 
