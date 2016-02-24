@@ -29,7 +29,7 @@ def generate_css(pageId):
     content = file_reader.read()
     file_reader.close()
 
-    replacements = {"[main_div_id]": pageId}
+    replacements = {"[main_div_id]": "sd-"+pageId}
 
     new_file_content = replace_all(content, replacements)
 
@@ -74,7 +74,11 @@ def generate_file(pageId, youtubeId, title, desc, random_number, imageId):
     return new_file_name
 
 def generate_embed(path):
-    js_script = "'<script crossorigin='anonymous' src=http://159.203.108.89:8000/api/" + path + "></script>'"
+
+    js_src = "src=http://159.203.108.89:8000/api/"
+    js_origin = " crossorigin=anonymous>"
+
+    js_script = "'<script "+js_src+path+js_origin+"></script>'"
     html_script = "\n<div id='sd-"+g_pageId+"'></div>"
 
     return html_script + js_script
