@@ -52,7 +52,7 @@ function sendCorsRequest(){
 
 }
 
-sendCorsRequest();
+// sendCorsRequest();
 
 
 // This id will be changed dynamically depending on the random number passed through
@@ -63,7 +63,7 @@ var desc = "[desc]";
 var title = "[title]";
 var youtubeID = "[youtubeId]";
 var pageId = "[pageId]";
-var imageId = "[imageId]";
+var imageId = "imageId";
 
 var main_div = document.getElementById(main_div_id);
 
@@ -75,7 +75,14 @@ style_link.type = "text/css";
 style_link.rel = "stylesheet";
 style_link.href = "http://127.0.0.1:5000/api/" + pageId + ".css";
 
+// Let's add fontawesome for the time being
+var font_link = document.createElement("link");
+font_link.type = "text/css";
+font_link.rel = "stylesheet";
+font_link.href = "https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css";
+
 head.appendChild(style_link); 
+head.appendChild(font_link);
 
 /*
   main_inner_div
@@ -134,7 +141,7 @@ main_inner_div_footer.appendChild(main_inner_div_desc_p);
 // footer div end ---
 
 // outer footer div start ---
-var main_inner_footer_bottom - document.createElement("div");
+var main_inner_footer_bottom =  document.createElement("div");
 main_inner_footer_bottom.setAttribute("id", "main-inner-footer-bottom");
 
 var sel_inner_ul = document.createElement("ul");
@@ -164,3 +171,5 @@ main_inner_div.appendChild(main_inner_div_header);
 main_inner_div.appendChild(main_inner_image_div);
 main_inner_div.appendChild(main_inner_div_footer);
 main_inner_div.appendChild(main_inner_footer_bottom);
+
+main_div.appendChild(main_inner_div);
