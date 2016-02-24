@@ -73,7 +73,7 @@ var style_link = document.createElement("link");
 
 style_link.type = "text/css";
 style_link.rel = "stylesheet";
-style_link.href = "http://127.0.0.1:5000/api/" + main_div_id + ".css";
+style_link.href = "http://127.0.0.1:5000/api/" + pageId + ".css";
 
 head.appendChild(style_link); 
 

@@ -16,6 +16,7 @@ def replace_all(text, dic):
 
     return text
 
+
 def file_check(pageId):
     """
     If the file exists then we need not create another one.
@@ -23,7 +24,7 @@ def file_check(pageId):
     return os.path.isfile("reference/" + pageId + ".js")
 
 
-def generate_file(pageId, youtubeId, title, desc, random_number):
+def generate_file(pageId, youtubeId, title, desc, random_number, imageId):
     """
     This will generate a js file with relevant information replaced
     and will return the path of the saved file so get_params
@@ -42,10 +43,9 @@ def generate_file(pageId, youtubeId, title, desc, random_number):
     content = file_reader.read()
     file_reader.close()
 
-
     replacements = {"[main_div_id]": "sd-"+pageId, "[desc]": desc,
                     "[youtubeId]": youtubeId, "[pageId]": pageId,
-                    "[title]": title}
+                    "[title]": title, "[imageId": imageId}
 
     new_file_content = replace_all(content, replacements)
 
