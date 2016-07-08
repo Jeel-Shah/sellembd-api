@@ -57,13 +57,13 @@ function sendCorsRequest(){
 
 // This id will be changed dynamically depending on the random number passed through
 
-var main_div_id = "[main_div_id]";
+var main_div_id = "sd-123456";
 
-var desc = "[desc]";
-var title = "[title]";
-var youtubeID = "[youtubeId]";
-var pageId = "[pageId]";
-var imageId = "[imageId]";
+var desc = "great desc";
+var title = "great!";
+var youtubeID = "xk3e9d";
+var pageId = "123456";
+var imageId = "https://i.ytimg.com/vi/qqmmThjDBvU/hqdefault.jpg";
 
 var main_div = document.getElementById(main_div_id);
 
@@ -175,6 +175,6 @@ main_inner_div.appendChild(main_inner_footer_bottom);
 main_div.appendChild(main_inner_div);
 
 function generateEmbed(){
-    prompt("Your embed code", "[embed_code]");
+    prompt("Your embed code", "<div id=\'sd-123456\'></div><script src=\'http://159.203.108.89:8000/api/123456.js\' crossorigin=\'anonymous\'></script>");
 }
 
